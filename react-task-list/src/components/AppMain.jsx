@@ -74,12 +74,33 @@ export default function AppMain() {
     ];
 
     const completed = tasks.filter((task) => task.state.toLowerCase() === 'completed')
-    console.log(completed);
+    const in_progress = tasks.filter((task) => task.state.toLowerCase() != 'completed')
 
     return (
+
         <main>
-            ciao
-        </main>
+
+            <section className="current">
+                <h3>Current Tasks ({in_progress.length})</h3>
+
+
+                {in_progress.map(task =>
+                    <ul key={task.id}>
+                        <h3>{task.title} {task.state}</h3>
+                        <li>Priority: {task.priority}</li>
+                        <li>Est. Time: {task.estimatedTime}</li>
+                    </ul>
+                )}
+
+
+            </section>
+
+            <section className="completed">
+
+            </section>
+
+        </main >
+
     )
 
 }
