@@ -5,9 +5,43 @@
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 1rem;
-    padding: 1rem;
+    padding: 1.5rem;
+    background-color: aquamarine;
+}
+
+main {
+    padding: 2rem;
+
+    h2 {
+        font-size: 1.75rem;
+        padding-bottom: 1rem;
+    }
+
+    ul {
+        list-style: none;
+
+        h3 {
+            font-size: 1.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        li {
+            font-size: 1.25rem;
+        }
+
+        li:last-child {
+            padding-bottom: 0.5rem;
+        }
+    }
+
+    hr {
+        margin: 1rem 0rem;
+    }
+
+    span {
+        background-color: rgb(255, 140, 0);
+        padding: 0.25rem 0.5rem;
+        color: white;
+    }
 }

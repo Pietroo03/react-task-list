@@ -81,12 +81,12 @@ export default function AppMain() {
         <main>
 
             <section className="current">
-                <h3>Current Tasks ({in_progress.length})</h3>
+                <h2>Current Tasks ({in_progress.length})</h2>
 
 
                 {in_progress.map(task =>
                     <ul key={task.id}>
-                        <h3>{task.title} {task.state}</h3>
+                        <h3>{task.title} <span>{task.state}</span></h3>
                         <li>Priority: {task.priority}</li>
                         <li>Est. Time: {task.estimatedTime}</li>
                     </ul>
@@ -95,16 +95,16 @@ export default function AppMain() {
 
             </section>
 
-            <br />
+            <hr />
 
             <section className="completed">
 
-                <h3>Current Tasks ({completed.length})</h3>
+                <h2>Current Tasks ({completed.length})</h2>
 
 
                 {completed.map(task =>
                     <ul key={task.id}>
-                        <h3>{task.title} {task.state}</h3>
+                        <h3>{task.title} <span>{task.state}</span> </h3>
                         <li>Priority: {task.priority}</li>
                         <li>Est. Time: {task.estimatedTime}</li>
                     </ul>
