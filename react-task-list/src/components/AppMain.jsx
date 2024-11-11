@@ -83,7 +83,6 @@ export default function AppMain() {
             <section className="current">
                 <h2>Current Tasks ({in_progress.length})</h2>
 
-
                 {in_progress.map(task =>
                     <ul key={task.id}>
                         <h3>{task.title} <span>{task.state}</span></h3>
@@ -92,7 +91,6 @@ export default function AppMain() {
                     </ul>
                 )}
 
-
             </section>
 
             <hr />
@@ -100,7 +98,6 @@ export default function AppMain() {
             <section className="completed">
 
                 <h2>Current Tasks ({completed.length})</h2>
-
 
                 {completed.map(task =>
                     <ul key={task.id}>
