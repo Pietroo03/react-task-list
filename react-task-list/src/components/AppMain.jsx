@@ -95,7 +95,20 @@ export default function AppMain() {
 
             </section>
 
+            <br />
+
             <section className="completed">
+
+                <h3>Current Tasks ({completed.length})</h3>
+
+
+                {completed.map(task =>
+                    <ul key={task.id}>
+                        <h3>{task.title} {task.state}</h3>
+                        <li>Priority: {task.priority}</li>
+                        <li>Est. Time: {task.estimatedTime}</li>
+                    </ul>
+                )}
 
             </section>
 
